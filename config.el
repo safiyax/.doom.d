@@ -3,7 +3,6 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
  (setq user-full-name "Zeeshan Hooda"
@@ -23,7 +22,8 @@
 ;;
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
-(setq doom-font (font-spec :family "Berkeley Mono" :size 14 :weight 'regular))
+(setq doom-font
+      (font-spec :family "Berkeley Mono" :size 14 :weight 'regular))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -44,8 +44,8 @@
 (setq org-directory "~/org/")
 
 ;; FIXME Set the initial frame size to something reasonable
-(setq initial-frame-alist
-      (append initial-frame-alist
+(setq default-frame-alist
+      (append default-frame-alist
               '((width  . 200)
                 (height . 60))))
 
@@ -104,3 +104,5 @@
    "\n#+HTML_HEAD_EXTRA: <div style=\"display: none\"> \\(\n"
    (prefix-all-lines "#+HTML_HEAD_EXTRA: " body)
    "\n#+HTML_HEAD_EXTRA: \\)</div>\n"))
+
+(mac-pseudo-daemon-mode 1)

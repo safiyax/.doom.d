@@ -56,3 +56,6 @@
 
 ;; Citeproc for citation styles??
 (package! citeproc)
+
+;; pseudo daemon for correct macOS behavior on emacs-mac port
+(package! mac-pseudo-daemon)
